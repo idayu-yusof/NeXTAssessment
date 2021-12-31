@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vZQgNglRYY5BQcV4mwso49zp7SNxGa0nuPtKet4H0BuINIoKwyCYwRYx6eoY2kOX9a6qaRUMo8dtbwhRKspc0A==",
+  "success": true,
+  "projectFilePath": "D:\\WEB API\\NeXTAssessment\\NeXTAssessment\\NeXTAssessment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

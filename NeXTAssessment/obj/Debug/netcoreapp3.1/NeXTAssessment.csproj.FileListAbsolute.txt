@@ -1,0 +1,16 @@
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.exe
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.deps.json
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.runtimeconfig.json
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.runtimeconfig.dev.json
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.dll
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\NeXTAssessment.pdb
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.csproj.AssemblyReference.cache
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.GeneratedMSBuildEditorConfig.editorconfig
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.AssemblyInfoInputs.cache
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.AssemblyInfo.cs
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.csproj.CoreCompileInputs.cache
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.dll
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.pdb
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.genruntimeconfig.cache
+D:\WEB API\NeXTAssessment\NeXTAssessment\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\WEB API\NeXTAssessment\NeXTAssessment\obj\Debug\netcoreapp3.1\NeXTAssessment.csproj.CopyComplete
