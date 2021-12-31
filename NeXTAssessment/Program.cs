@@ -14,20 +14,23 @@ namespace NeXTAssessment
         {
             Console.WriteLine("ENTER THE DATE AND TIME (eg: 23/07/2021 6:51pm) : ");
             string date = Console.ReadLine();
+            Console.WriteLine();
+
             DateTime inputDate = DateTime.Parse(date);
 
-            inputDate = inputDate.AddMinutes(-60);
+            DateTime univDate = inputDate.ToUniversalTime();
+            univDate = univDate.AddMinutes(-60);
             //Console.WriteLine("AFTER PARSING : " + parsedDate);
 
             long[] unixTimestamps = new long[20];
             for (int loop = 0; loop < 13; loop++)
             {                
-                long unixTime = ((DateTimeOffset)inputDate).ToUnixTimeSeconds();
+                long unixTime = ((DateTimeOffset)univDate).ToUnixTimeSeconds();
                 unixTimestamps[loop] = unixTime;
-                Console.WriteLine(loop+1 + " ---- " + inputDate + " ---- " +unixTime);
+                Console.WriteLine(loop+1 + ". " + univDate + " ---- " +unixTime);
                 Console.WriteLine();
 
-                inputDate = inputDate.AddMinutes(+10);
+                univDate = univDate.AddMinutes(+10);
 
                 #region - calling API
                 HttpClient client = new HttpClient();
@@ -42,14 +45,24 @@ namespace NeXTAssessment
                         var messageTask = result.Content.ReadAsStringAsync();
                         messageTask.Wait();
 
-                        List<Attributes> attributes = JsonConvert.DeserializeObject<List<Attributes>>(messageTask.Result);
+                        List<Location> location = JsonConvert.DeserializeObject<List<Location>>(messageTask.Result);
                         
-                        foreach ( var item in attributes)
-                        {
-                            Console.WriteLine("Latitude: " + item.latitude);
+                        foreach ( var item in location)
+                        {                           
+                            var response = client.GetStringAsync("https://api.wheretheiss.at/v1/coordinates/" +item.latitude +"," +item.longitude);
+
+                            response.Wait();
+
+                            Value value = JsonConvert.DeserializeObject<Value>(response.Result);
+
+                                Console.WriteLine("Latitude: " + value.latitude);
+                                Console.WriteLine("Longitude: " + value.longitude);
+                                Console.WriteLine("Time Zome: " + value.timezone_id);
+                                Console.WriteLine("Country Code: " + value.country_code);
+                                Console.WriteLine("Map URL: " + value.map_url);
+                            
                         }
                         
-                        //Console.WriteLine("Result : " + messageTask.Result);
                         Console.WriteLine();
                     }
                 }
@@ -57,14 +70,23 @@ namespace NeXTAssessment
 
             }
 
-            Console.WriteLine("CURRENT TIME " + inputDate);
+            Console.WriteLine("INPUT DATE " + inputDate);
 
         }
 
-        class Attributes
+        class Location
         {
             public float latitude { get; set; }
             public float longitude { get; set; }
+        }
+
+        class Value
+        {
+            public float latitude { get; set; }
+            public float longitude { get; set; }
+            public string timezone_id { get; set; }
+            public string country_code { get; set; }
+            public string  map_url { get; set; }
         }
     }
 }
