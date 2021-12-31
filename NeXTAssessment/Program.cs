@@ -49,17 +49,7 @@ namespace NeXTAssessment
                             Console.WriteLine("Latitude: " + item.latitude);
                         }
                         
-
-                        //dynamic Result = JsonConvert.DeserializeObject<RootObject>(messageTask.Result);
-
-                        //var value = Result.Attributes.MajorIssue.attributeValue;
-
-                        //var jo = JObject.Parse(messageTask.Result);
-                        //var lat = jo["latitude"].ToString();
-                        //Console.WriteLine("latitude: " +lat);
-                        //Console.Read();
-
-                        Console.WriteLine("Result : " + messageTask.Result);
+                        //Console.WriteLine("Result : " + messageTask.Result);
                         Console.WriteLine();
                     }
                 }
@@ -69,23 +59,12 @@ namespace NeXTAssessment
 
             Console.WriteLine("CURRENT TIME " + inputDate);
 
-            //Program program = new Program();
-            //await program.GetISSLocation(parsedDate);
-
         }
 
         class Attributes
         {
             public float latitude { get; set; }
+            public float longitude { get; set; }
         }
-        //private async Task GetISSLocation(DateTime date)
-        //{
-        //    var result = date.AddMinutes(-10);
-
-        //    long unixTime = ((DateTimeOffset)date).ToUnixTimeSeconds();
-        //    Console.WriteLine("UNIX TIMPSTAMP : " + unixTime);
-
-        //    Console.WriteLine("DEDUCTED 10 MINS : " + result);
-        //}
     }
 }
